@@ -1,6 +1,6 @@
 const Router = require('express')
 const router = new Router()
-const bookController = require('../controllers/BookController')
+const bookController = require('../controllers/bookController')
 const checkRole = require('../middleware/checkRoleMiddleware')
 
 router.get('/', bookController.getAll)
