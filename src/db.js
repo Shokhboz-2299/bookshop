@@ -4,3 +4,8 @@ module.exports = new Sequelize("postgres://abymlrgl:XhBwBfIFFASQRcYEdqqfvjmywfMA
 
 
   // module.exports = new Sequelize('postgres://postgres:shokhboz99@localhost:5432/bookshop')
+
+  //  "name":"user5",
+  //  "email":"user5@gmail.com",
+  //  "password":"1234",
+  //  "role":"superadmin"
