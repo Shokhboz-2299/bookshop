@@ -113,7 +113,7 @@ router.put('/:id',checkRole('admin'), libraryController.updateLibrary)
 * /api/library/{id}:
 *   delete:
 *     summary: Remove the library by id
-*     tags: [Course]
+*     tags: [Library]
 *     parameters:
 *       - in: path
 *         name: id

@@ -103,7 +103,7 @@ router.put('/change/:id',checkRole('superadmin'), userController.changeAdmin)
  * /api/user/users:
  *   get:
  *     summary: get all users
- *     tags: [Books]
+ *     tags: [User]
  *     responses:
  *       200:
  *         description: allow to only admins 
