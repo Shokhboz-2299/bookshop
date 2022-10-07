@@ -49,7 +49,7 @@ class UserController {
     async changeAdmin(req, res, next) {
     
       try {
-        let {id} = req.body
+        let {id} = req.params
          await User.update({role:"admin"},{
           where:{
             id

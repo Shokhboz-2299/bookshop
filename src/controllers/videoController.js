@@ -31,7 +31,8 @@ class VideoController {
    }
 
     async update(req, res) {
-      let {id, name,desc} = req.body
+      let { name,desc} = req.body
+      const {id} =req.params
       const {video} = req.files
       let fileName = uuid.v4() + ".mp4"
       video.mv(path.resolve(__dirname, '..', 'static', fileName))
@@ -42,7 +43,7 @@ class VideoController {
    }
 
    async delete(req, res) {
-    let {id} = req.query
+    let {id} = req.params
        await Video.destroy({
       where: {id}
     })

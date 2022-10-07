@@ -20,7 +20,8 @@ class CourseController {
     }
 
     async updateLibrary(req, res) {
-      let {id, name} = req.body
+      let { name} = req.body
+      let {id} = req.params
       const course = await Course.update({name}, {
         where: {id}
       })
@@ -28,7 +29,7 @@ class CourseController {
    }
 
    async deleteLibrary(req, res) {
-    let {id} = req.query
+    let {id} = req.params
        await Course.destroy({
       where: {id}
     })

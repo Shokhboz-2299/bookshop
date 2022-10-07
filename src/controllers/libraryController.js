@@ -20,7 +20,8 @@ class LibraryController {
     }
 
     async updateLibrary(req, res) {
-      let {id, name} = req.body
+      let { name} = req.body
+      let {id} = req.params
       const library = await Library.update({name}, {
         where: {id}
       })
@@ -28,7 +29,7 @@ class LibraryController {
    }
 
    async deleteLibrary(req, res) {
-    let {id} = req.query
+    let {id} = req.params
        await Library.destroy({
       where: {id}
     })

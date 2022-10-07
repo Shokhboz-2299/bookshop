@@ -31,7 +31,8 @@ class BookController {
    }
 
     async update(req, res) {
-      let {id, name,desc} = req.body
+      let { name,desc} = req.body
+      let {id} = req.params
       const {img} = req.files
       let fileName = uuid.v4() + ".jpg"
       img.mv(path.resolve(__dirname, '..', 'static', fileName))
@@ -42,7 +43,7 @@ class BookController {
    }
 
    async delete(req, res) {
-    let {id} = req.query
+    let {id} = req.params
        await Book.destroy({
       where: {id}
     })
